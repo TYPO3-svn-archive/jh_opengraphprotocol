@@ -96,12 +96,12 @@ class user_jhopengraphprotocol {
 		}
 
 		//render output to html-header
-		if ($title != '') {$GLOBALS['TSFE']->additionalHeaderData[$extKey.'1'] = '<meta property="og:title" content="'.$title.'"/>';}
-		if ($type != '') {$GLOBALS['TSFE']->additionalHeaderData[$extKey.'2'] = '<meta property="og:type" content="'.$type.'"/>';}
-		if ($image != '') {$GLOBALS['TSFE']->additionalHeaderData[$extKey.'3'] = '<meta property="og:image" content="'.$image.'"/>';}
-		if ($link != '') {$GLOBALS['TSFE']->additionalHeaderData[$extKey.'4'] = '<meta property="og:url" content="'.$link.'"/>';}
-		if ($sitename != '') {$GLOBALS['TSFE']->additionalHeaderData[$extKey.'5'] = '<meta property="og:site_name" content="'.$sitename.'"/>';}
-		if ($description != '') {$GLOBALS['TSFE']->additionalHeaderData[$extKey.'6'] = '<meta property="og:description" content="'.$description.'"/>';}
+		if ($title != '') {$GLOBALS['TSFE']->additionalHeaderData[$extKey.'1'] = '<meta property="og:title" content="'.$title.'" />';}
+		if ($type != '') {$GLOBALS['TSFE']->additionalHeaderData[$extKey.'2'] = '<meta property="og:type" content="'.$type.'" />';}
+		if ($image != '') {$GLOBALS['TSFE']->additionalHeaderData[$extKey.'3'] = '<meta property="og:image" content="'.$image.'" />';}
+		if ($link != '') {$GLOBALS['TSFE']->additionalHeaderData[$extKey.'4'] = '<meta property="og:url" content="'.$link.'" />';}
+		if ($sitename != '') {$GLOBALS['TSFE']->additionalHeaderData[$extKey.'5'] = '<meta property="og:site_name" content="'.$sitename.'" />';}
+		if ($description != '') {$GLOBALS['TSFE']->additionalHeaderData[$extKey.'6'] = '<meta property="og:description" content="'.$description.'" />';}
 
 		return $content;
 	}

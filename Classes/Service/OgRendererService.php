@@ -124,7 +124,7 @@ class tx_jhopengraphprotocol_service_ogrenderer {
 						// A og property that accepts more than one value
 						foreach ($value as $multiPropertyValue) {
 							// Render each value to a new og property meta-tag
-							$res .= '<meta property="og:'.$key.'" content="'.$multiPropertyValue.'"/>';
+							$res .= '<meta property="og:'.$key.'" content="'.$multiPropertyValue.'" />';
 						}
 					} else {
 						// A og property with child-properties
@@ -132,7 +132,7 @@ class tx_jhopengraphprotocol_service_ogrenderer {
 					}
 				} else {
 					// A singe og property to be rendered
-					$res .= '<meta property="og:'.$key.'" content="'.$value.'">';
+					$res .= '<meta property="og:'.$key.'" content="'.$value.'" />';
 				}
 			}
 		}
