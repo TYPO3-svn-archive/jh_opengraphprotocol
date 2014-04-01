@@ -2,7 +2,7 @@
 /***************************************************************
 *  Copyright notice
 *
-*  (c) 2012-2013 Jonathan Heilmann <mail@jonathan-heilmann.de>
+*  (c) 2012-2014 Jonathan Heilmann <mail@jonathan-heilmann.de>
 *  All rights reserved
 *
 *  This script is part of the TYPO3 project. The TYPO3 project is
@@ -70,7 +70,6 @@ class user_jhopengraphprotocol {
 		} else {
 			$image = $GLOBALS['TSFE']->tmpl->getFileName($conf['image']);
 		}
-		$image = t3lib_div::locationHeaderUrl($image);
 
 		//render link
 		$link = t3lib_div::getIndpEnv('TYPO3_REQUEST_URL'); //now compatibel with CoolURI - thanks to thomas@chaschperli.ch
@@ -98,7 +97,7 @@ class user_jhopengraphprotocol {
 		//render output to html-header
 		if ($title != '') {$GLOBALS['TSFE']->additionalHeaderData[$extKey.'1'] = '<meta property="og:title" content="'.$title.'" />';}
 		if ($type != '') {$GLOBALS['TSFE']->additionalHeaderData[$extKey.'2'] = '<meta property="og:type" content="'.$type.'" />';}
-		if ($image != '') {$GLOBALS['TSFE']->additionalHeaderData[$extKey.'3'] = '<meta property="og:image" content="'.$image.'" />';}
+		if ($image != '') {$GLOBALS['TSFE']->additionalHeaderData[$extKey.'3'] = '<meta property="og:image" content="'.t3lib_div::locationHeaderUrl($image).'" />';}
 		if ($link != '') {$GLOBALS['TSFE']->additionalHeaderData[$extKey.'4'] = '<meta property="og:url" content="'.$link.'" />';}
 		if ($sitename != '') {$GLOBALS['TSFE']->additionalHeaderData[$extKey.'5'] = '<meta property="og:site_name" content="'.$sitename.'" />';}
 		if ($description != '') {$GLOBALS['TSFE']->additionalHeaderData[$extKey.'6'] = '<meta property="og:description" content="'.$description.'" />';}
