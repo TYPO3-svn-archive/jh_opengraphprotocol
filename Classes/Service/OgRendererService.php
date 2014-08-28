@@ -79,7 +79,7 @@ class tx_jhopengraphprotocol_service_ogrenderer {
 		}
 
 		// Get url
-		$og['url'] = t3lib_div::getIndpEnv('TYPO3_REQUEST_URL');
+		$og['url'] = htmlentities(t3lib_div::getIndpEnv('TYPO3_REQUEST_URL'));
 
 		// Get site_name
 		if (!empty($conf['sitename'])) {

@@ -28,10 +28,16 @@ ChangeLog
          Changes
 
  - :Version:
+         1.0.2
+
+   :Changes:
+         \* Security fix, please update
+
+ - :Version:
          1.0.1
 
    :Changes:
-         \* ficed bug #56813
+         \* fixed bug #56813
 
          \* updated manual to ReST
 

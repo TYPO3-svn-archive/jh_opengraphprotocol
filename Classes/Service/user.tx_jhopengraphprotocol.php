@@ -72,7 +72,7 @@ class user_jhopengraphprotocol {
 		}
 
 		//render link
-		$link = t3lib_div::getIndpEnv('TYPO3_REQUEST_URL'); //now compatibel with CoolURI - thanks to thomas@chaschperli.ch
+		$link = htmlentities(t3lib_div::getIndpEnv('TYPO3_REQUEST_URL')); //now compatibel with CoolURI - thanks to thomas@chaschperli.ch
 
 		//render sitename
 		if (!empty($conf['sitename'])) {
